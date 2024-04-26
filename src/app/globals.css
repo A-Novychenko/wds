@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-bgPrimary font-raleway text-[16px] font-normal leading-[1.2];
+}
+
+.section {
+  @apply py-20;
+}
+
+.list-marker {
+  list-style-type: circle;
+}
