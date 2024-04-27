@@ -14,8 +14,8 @@ export const ServicesSection: React.FC = () => {
             alt="вебсайти на різних пристроях"
           />
           <div className="w-full">
-            <h2 className="mb-12 text-center text-[32px] font-semibold">
-              Наші послуги
+            <h2 className="mb-12 text-[40px] font-semibold uppercase tracking-[2px]">
+              Що ми пропонуємо
             </h2>
             <ul className="list-marker text-[24px] font-medium leading-[2]">
               <li>

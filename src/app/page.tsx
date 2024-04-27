@@ -1,4 +1,9 @@
-import { HeroSection, ServicesSection } from '@/sections';
+import {
+  CollaborationSection,
+  ContactSection,
+  HeroSection,
+  ServicesSection,
+} from '@/sections';
 
 export default function Home() {
   return (
@@ -6,6 +11,10 @@ export default function Home() {
       <HeroSection />
 
       <ServicesSection />
+
+      <CollaborationSection />
+
+      <ContactSection />
     </>
   );
 }
