@@ -10,11 +10,13 @@ export const HeroSection: React.FC = () => {
           <h1 className="w-[600px] text-[80px] font-semibold uppercase text-white">
             Ефективні веб-рішення для вашого бізнесу
           </h1>
+
           <div className=" overflow-hidden rounded-full">
             <Image
               src={HeroImg}
               width="600"
               height="600"
+              priority
               alt="абстракція зображень вебтехнологій"
             />
           </div>
