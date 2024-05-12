@@ -7,7 +7,7 @@ body {
 }
 
 .section {
-  @apply py-20;
+  @apply py-14 xl:py-20;
 }
 
 .list-marker {

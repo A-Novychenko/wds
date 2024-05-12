@@ -1,23 +1,23 @@
-import ProblemIcon from '~/icons/problem.svg';
 import MeetingIcon from '~/icons/meeting.svg';
+import ProblemIcon from '~/icons/problem.svg';
 import ResultIcon from '~/icons/result.svg';
 
 export const CollaborationSection: React.FC = () => {
   return (
     <section className="section">
       <div className="container">
-        <h2 className="mb-20 text-center text-[40px] font-semibold uppercase tracking-[2px]">
+        <h2 className="mb-7 text-center text-3xl font-semibold uppercase tracking-[2px] md:mb-20 md:text-4xl">
           Декілька кроків для розширення вашого бізнесу
         </h2>
 
-        <ul className="flex justify-center gap-20 text-[20px] leading-[1.75] tracking-[0.6px]">
+        <ul className="flex flex-col justify-center gap-6 text-[16px] leading-[1.75] tracking-[0.6px] md:text-xl xl:flex-row">
           <li className="list-steps">
             <ProblemIcon
-              width="100"
-              height="100"
-              className="mb-8 text-orange-900"
+              width="90"
+              height="90"
+              className="mb-8 size-[60px] text-orange-900 md:size-[90px]"
             />
-            <p className="mb-4 text-center text-[22px] font-bold uppercase">
+            <p className="mb-4 text-center text-[20px] font-bold uppercase md:text-[22px]">
               Проблема
             </p>
             <p className="text-center">
@@ -28,11 +28,11 @@ export const CollaborationSection: React.FC = () => {
 
           <li className="list-steps">
             <MeetingIcon
-              width="100"
-              height="100"
-              className="mb-8 text-emerald-900"
+              width="90"
+              height="90"
+              className="mb-8 size-[60px] text-emerald-900 md:size-[90px]"
             />
-            <p className="mb-4 text-center text-[22px] font-bold uppercase">
+            <p className="mb-4 text-center text-[20px] font-bold uppercase md:text-[22px]">
               Рішення
             </p>
             <p className="text-center">
@@ -43,11 +43,11 @@ export const CollaborationSection: React.FC = () => {
 
           <li className="list-steps">
             <ResultIcon
-              width="100"
-              height="100"
-              className="mb-8 text-green-600"
+              width="90"
+              height="90"
+              className="mb-8 size-[60px] text-green-600 md:size-[90px]"
             />
-            <p className="mb-4 text-center text-[22px] font-bold uppercase">
+            <p className="mb-4 text-center text-[20px] font-bold uppercase md:text-[22px]">
               Результат
             </p>
             <p className="text-center">

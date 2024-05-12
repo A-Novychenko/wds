@@ -7,16 +7,16 @@ export const ContactSection: React.FC = () => {
   return (
     <section className="section bg-blue-600">
       <div className="container">
-        <h2 className="mb-20 text-center text-[40px] font-semibold uppercase tracking-[2px]">
-          Є запитання, бажаєте консультацію? <br /> Напишіть нам!
+        <h2 className="mb-7 text-3xl font-semibold uppercase tracking-[2px] md:text-center md:text-4xl">
+          Є запитання чи бажаєте консультацію? <br /> Напишіть нам!
         </h2>
 
-        <div className="flex items-center gap-20">
-          <div>
+        <div className="items-center md:flex md:gap-6 xl:justify-between">
+          <div className="overflow-hidden rounded-br-[38px] rounded-tl-[38px]">
             <Image
               src={ContactImg}
-              width="600"
-              height="600"
+              width="550"
+              height="550"
               alt="вебсайти на різних пристроях"
             />
           </div>
