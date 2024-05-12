@@ -19,7 +19,7 @@ export const Contacts: React.FC = () => {
         <li>
           <Link
             className="text-white transition-all hover:text-accent"
-            href="https://t.me/Oleksandr_WDS"
+            href="https://t.me/WebDevSynergy_Info"
             target="_blank"
           >
             <TelegramIcon width={32} height={32} />
