@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Raleway, Geologica } from 'next/font/google';
+import { Shantell_Sans, Geologica } from 'next/font/google';
 
 import { Footer, Header } from '@/layout';
 
@@ -7,10 +7,10 @@ import meta from '@/data/meta';
 
 import './globals.css';
 
-const raleway = Raleway({
+const shantellSans = Shantell_Sans({
   subsets: ['cyrillic', 'latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-raleway',
+  variable: '--font-shantellSans',
   display: 'swap',
 });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk" className="scroll-smooth">
-      <body className={`${raleway.variable} ${geologica.variable}`}>
+      <body className={`${shantellSans.variable} ${geologica.variable}`}>
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="grow">{children}</main>

@@ -28,7 +28,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        raleway: ['var(--font-raleway)'],
+        shantellSans: ['var(--font-shantellSans)'],
         geologica: ['var(--font-geologica)'],
       },
 
