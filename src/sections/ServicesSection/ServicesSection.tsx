@@ -1,49 +1,29 @@
-import Image from 'next/image';
+import { ServicesCard, Title } from '@/components/ui';
 
-import ServicesImg from '~/images/services.jpeg';
+import { cn } from '@/utils';
 
-export const ServicesSection: React.FC = () => {
+export const ServicesSection: React.FC<ISectionProps> = ({ dict }) => {
+  const { title, services } = dict.mainPage.servicesSection;
+
   return (
-    <section className="section bg-bgSecondary">
-      <div className="container xl:flex xl:items-center xl:justify-between">
-        <Image
-          src={ServicesImg}
-          width="500"
-          height="500"
-          alt="вебсайти на різних пристроях"
-          className="mdOnly:mx-auto"
-        />
-        <div>
-          <h2 className="mb-5 text-3xl font-semibold uppercase tracking-[2px] md:text-4xl">
-            Що ми пропонуємо
-          </h2>
-          <ul className="list-marker pl-4 text-[16px] font-medium leading-[2] md:text-xl">
-            <li>
-              <p>Розробка дизайну</p>
-            </li>
-            <li>
-              <p>Розробка лендінгів (сайт-візитка)</p>
-            </li>
-            <li>
-              <p>Розробка листівок</p>
-            </li>
-            <li>
-              <p>Розробка багатосторінкових сайтів</p>
-            </li>
-            <li>
-              <p>Розробка веб-застосунків</p>
-            </li>
-            <li>
-              <p>Розробка застосунків для мобільних пристроїв</p>
-            </li>
-            <li>
-              <p>Редизайн та рефакторінг</p>
-            </li>
-            <li>
-              <p>Інші види робіт за домовленістю</p>
-            </li>
-          </ul>
-        </div>
+    <section className="section">
+      <div className="container">
+        <Title tag="h2" style="second" className="mb-4 xl:mb-6 2xl:mb-8">
+          {title}
+        </Title>
+
+        <ul
+          className={cn(
+            'flex flex-col gap-4',
+            'md:flex-row md:flex-wrap',
+            'xl:gap-6',
+          )}
+        >
+          {services &&
+            services.map(({ label }, idx) => (
+              <ServicesCard key={idx} label={label} />
+            ))}
+        </ul>
       </div>
     </section>
   );

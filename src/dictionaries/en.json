@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "main": {
+      "title": "WDS",
+      "description": "WDS",
+      "keywords": "",
+      "images": [
+        {
+          "url": "/meta/og-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "WDS"
+        }
+      ]
+    }
+  },
+  "common": {
+    "contacts": {
+      "email": {
+        "href": "mailto:wds.webdevsynergy@gmail.com",
+        "label": "wds.webdevsynergy@gmail.com"
+      },
+      "phone": {
+        "href": "tel:+380665762413",
+        "label": "+380 66 576 24 13"
+      }
+    },
+    "logoAlt": "Company logo",
+    "mainNav": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Services",
+        "href": "/services"
+      },
+      {
+        "name": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "mainPage": {
+    "heroSection": {
+      "title": {
+        "accentText": "Web Dev Synergy",
+        "text": "The best technical specialists"
+      },
+      "description": "We create modern websites and mobile apps that help grow your business. Check out our services and contact us — together, we’ll bring your ideas to life!",
+      "img": "/images/hero.jpg",
+      "alt": "Company logo"
+    },
+    "servicesSection": {
+      "title": "Services",
+      "services": [
+        {
+          "label": "LAnding page Development"
+        },
+        {
+          "label": "Corporate Website Development"
+        },
+        {
+          "label": "Web Application Development"
+        },
+        {
+          "label": "Modernization of existing projects"
+        },
+        {
+          "label": "LAnding page design"
+        },
+        {
+          "label": "Website design"
+        },
+        {
+          "label": "Mobile app design"
+        },
+        {
+          "label": "Other services"
+        }
+      ]
+    },
+    "contactSection": {
+      "title": "Get in Touch",
+      "img": "/images/contact-section.png",
+      "alt": "Company logo",
+      "form": {
+        "submitBtnLabel": "Send message",
+        "successSubmit": "Request sent successfully!",
+        "errorSubmit": "Message not sent, please try again later!",
+        "inputs": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Name",
+            "placeholder": "Enter your name",
+            "validationOptions": {
+              "required": {
+                "value": true,
+                "message": "Please enter your name"
+              },
+              "pattern": {
+                "value": "^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\\s-]+$",
+                "message": "The name contains invalid characters"
+              },
+              "maxLength": {
+                "value": 70,
+                "message": "The name can be no longer than 70 characters"
+              }
+            }
+          },
+          {
+            "name": "email",
+            "type": "email",
+            "label": "E-mail",
+            "placeholder": "Enter your e-mail",
+            "validationOptions": {
+              "required": {
+                "value": true,
+                "message": "Please enter your email address"
+              },
+              "pattern": {
+                "value": "^[a-zA-Z0-9]+([._-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$",
+                "message": "Incorrect email format"
+              },
+              "maxLength": {
+                "value": 100,
+                "message": "The email can be no longer than 100 characters."
+              }
+            }
+          }
+        ],
+        "textArea": {
+          "name": "message",
+          "type": "text",
+          "label": "Message",
+          "placeholder": "Enter your message",
+          "validationOptions": {
+            "required": {
+              "value": true,
+              "message": "Please write your message"
+            },
+            "minLength": {
+              "value": 6,
+              "message": "Message must be more than 7 symbols"
+            },
+            "maxLength": {
+              "value": 1024,
+              "message": "Maximum 1024 characters allowed."
+            }
+          }
+        }
+      }
+    }
+  },
+  "technicalPages": {
+    "errorPage": {
+      "title": "Something went wrong...",
+      "description": "This page is still under development, but we are working on it. Everything will be available soon!",
+      "link": {
+        "label": "Home",
+        "settings": {
+          "href": "/en/",
+          "externalLink": false
+        }
+      }
+    }
+  }
+}

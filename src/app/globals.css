@@ -2,31 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
 body {
-  @apply bg-bgPrimary font-shantellSans text-[16px] font-normal leading-[1.2];
+  color: var(--foreground);
+  background: var(--background);
+  font-family: serif;
+
+  @apply bg-mainBg font-nunito text-primaryText;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
 }
 
 .section {
-  @apply py-14 xl:py-20;
-}
-
-.list-marker {
-  list-style-type: circle;
-}
-
-.list-steps {
-  flex-basis: calc((100% - 160px) / 3);
-
-  @apply flex flex-col items-center;
-}
-
-:root {
-  --primary-text-color: #f6f7f9;
-  --secondary-text-color: #0ad87a;
-  --third-text-color: #030712;
-  --hover-dark-grey-color: #474747;
-  --hover-light-grey-color: #cac9c9;
-
-  --animation-hover: 0.3s ease-in-out;
-  --scale-transform-hover: scale(1.025);
+  @apply py-10 md:py-12 xl:py-14 2xl:py-16;
 }

@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "main": {
+      "title": "WDS",
+      "description": "WDS",
+      "keywords": "",
+      "images": [
+        {
+          "url": "/meta/og-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "WDS"
+        }
+      ]
+    }
+  },
+  "common": {
+    "contacts": {
+      "email": {
+        "href": "mailto:wds.webdevsynergy@gmail.com",
+        "label": "wds.webdevsynergy@gmail.com"
+      },
+      "phone": {
+        "href": "tel:+380665762413",
+        "label": "+380 66 576 24 13"
+      }
+    },
+    "logoAlt": "Логотип компанії",
+    "mainNav": [
+      {
+        "name": "Головна",
+        "href": "/"
+      },
+      {
+        "name": "Послуги",
+        "href": "/services"
+      },
+      {
+        "name": "Контакти",
+        "href": "/contact"
+      }
+    ]
+  },
+  "mainPage": {
+    "heroSection": {
+      "title": {
+        "accentText": "Web Dev Synergy",
+        "text": "Найкращі технічні спеціалісти"
+      },
+      "description": "Ми створюємо сучасні вебсайти та мобільні додатки, які допомагають розвивати ваш бізнес. Подивіться наші послуги та зв’яжіться з нами — разом ми втілимо ваші ідеї в життя!",
+      "img": "/images/hero.jpg",
+      "alt": "Логотип компанії"
+    },
+    "servicesSection": {
+      "title": "Послуги",
+      "services": [
+        {
+          "label": "Розробка лендінг пейдж"
+        },
+        {
+          "label": "Розробка корпоративних сайтів"
+        },
+        {
+          "label": "Розробка веб-додатків"
+        },
+        {
+          "label": "Модернізація існуючих проєктів"
+        },
+        {
+          "label": "Дизайн лендінг пейдж"
+        },
+        {
+          "label": "Дизайн сайтів"
+        },
+        {
+          "label": "Дизайн мобільних додатків"
+        },
+        {
+          "label": "Інші послуги"
+        }
+      ]
+    },
+    "contactSection": {
+      "title": "Зв'яжіться з нами",
+      "img": "/images/contact-section.png",
+      "alt": "Логотип компанії",
+      "form": {
+        "submitBtnLabel": "Надіслати повідомлення",
+        "successSubmit": "Повідомлення відправлено!",
+        "errorSubmit": "Повідомлення не надіслано, спробуйте пізніше!",
+        "inputs": [
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Ім'я",
+            "placeholder": "Введіть ваше ім'я",
+            "validationOptions": {
+              "required": {
+                "value": true,
+                "message": "Будь ласка, введіть ваше ім'я"
+              },
+              "pattern": {
+                "value": "^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\\s-]+$",
+                "message": "Ім'я містить недійсні символи"
+              },
+              "maxLength": {
+                "value": 70,
+                "message": "Ім'я не може містити більше 70 символів"
+              }
+            }
+          },
+          {
+            "name": "email",
+            "type": "email",
+            "label": "Емейл",
+            "placeholder": "Введіть ваш емейл",
+            "validationOptions": {
+              "required": {
+                "value": true,
+                "message": "Будь ласка, введіть адресу електронної пошти"
+              },
+              "pattern": {
+                "value": "^[a-zA-Z0-9]+([._-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$",
+                "message": "Неправильний формат електронної пошти"
+              },
+              "maxLength": {
+                "value": 100,
+                "message": "Емейл не може містити більше 100 символів."
+              }
+            }
+          }
+        ],
+        "textArea": {
+          "name": "message",
+          "type": "text",
+          "label": "Повідомлення",
+          "placeholder": "Введіть ваше повідомлення",
+          "validationOptions": {
+            "required": {
+              "value": true,
+              "message": "Будь ласка, напишіть своє повідомлення."
+            },
+            "minLength": {
+              "value": 6,
+              "message": "Повідомлення має бути більше 7 символів"
+            },
+            "maxLength": {
+              "value": 1024,
+              "message": "Максимальна кількість символів – 1024."
+            }
+          }
+        }
+      }
+    }
+  },
+  "technicalPages": {
+    "errorPage": {
+      "title": "Щось пішло не так...",
+      "description": "Сторінку не знайдено",
+      "link": {
+        "label": "Головна",
+        "settings": {
+          "href": "/uk/",
+          "externalLink": false
+        }
+      }
+    }
+  }
+}

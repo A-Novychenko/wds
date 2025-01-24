@@ -1,135 +1,153 @@
 'use client';
 
 import { useState } from 'react';
+// import dynamic from 'next/dynamic';
+
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Hourglass } from 'react-loader-spinner';
+import useFormPersist from 'react-hook-form-persist';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 
-import styles from './ContactForm.module.scss';
-import { ContactFormInputs } from './types';
+import { FormField, FormTextField, Loader } from '@/components/ui';
 
-export const ContactForm = () => {
-  const [visibleMsg, setVisibleMsg] = useState('');
-  const [load, setLoad] = useState(false);
+import { cn, generateEmailHTML, sendEmail, sendTG } from '@/utils';
+
+// import { sendEmail } from '@/utils/sendEmail';
+// import { generateEmailHTML } from '@/utils/generateEmailHTML';
+
+import staticData from '@/data/common.json';
+
+import { ContactFormProps } from './types';
+import { makeTgMsg } from '@/utils/makeTgMsg';
+
+export const ContactForm: React.FC<ContactFormProps> = ({ data }) => {
+  const {
+    submitBtnLabel,
+    inputs,
+    // select,
+    textArea,
+    successSubmit,
+    errorSubmit,
+  } = data;
+
+  const {
+    emailData: { subjectMailUser, subjectMailWDS },
+  } = staticData as IStaticData;
+
+  const [pending, setPending] = useState<boolean>(false);
 
   const {
     register,
     handleSubmit,
+    setValue,
+    watch,
     reset,
+    trigger,
     formState: { errors },
-  } = useForm<ContactFormInputs>();
-  const onSubmit: SubmitHandler<ContactFormInputs> = async ({
+  } = useForm<IContactsFormFields>();
+
+  useFormPersist('contactForm', { watch, setValue });
+
+  const onSubmit: SubmitHandler<IContactsFormFields> = async ({
     name,
     email,
-    msg,
+    message,
   }) => {
+    const mailDataWDS = {
+      subject: `${subjectMailWDS} ${name}`,
+      html: generateEmailHTML({
+        recipient: 'wds',
+        name,
+        email,
+        msg: message,
+      }),
+    };
+    const mailDataUser = {
+      subject: subjectMailUser,
+      to: email,
+      html: generateEmailHTML({
+        recipient: 'user',
+        name,
+        email,
+        msg: message,
+      }),
+    };
+
+    const msg = makeTgMsg({ name, email, message });
     try {
-      setLoad(true);
-      const sendData = `<b>Замовлення із сайта</b>\n<b>Ім'я: ${name}</b>\n<b>Email: ${email}</b>\n\n<b>${msg}</b>\n`;
-
-      const res = await fetch(`/api/tg/`, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(sendData),
-      });
-      if (!res.ok) {
-        throw new Error('Error TG send');
-      }
-
+      setPending(true);
+      await Promise.all([
+        await sendEmail(mailDataWDS),
+        await sendEmail(mailDataUser),
+        await sendTG(msg),
+      ]);
       reset();
-      setLoad(false);
-      setVisibleMsg('success');
-      setTimeout(() => {
-        setVisibleMsg('');
-      }, 3000);
-    } catch (error) {
-      setLoad(false);
-      setVisibleMsg('fail');
-      setTimeout(() => {
-        setVisibleMsg('');
-      }, 3000);
+      window.sessionStorage.removeItem('contactForm');
+      toast.success(successSubmit, {
+        closeButton: false,
+        className: 'toast-custom',
+      });
+    } catch (e) {
+      console.log('e', e);
+      toast.error(errorSubmit, {
+        closeButton: false,
+        className: 'toast-custom',
+      });
+    } finally {
+      setPending(false);
     }
   };
 
   return (
     <>
-      {!visibleMsg ? (
-        <>
-          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-            <div className={styles.label}>
-              <input
-                {...register('name', { required: true, minLength: 2 })}
-                className={styles.input}
-                placeholder="Імʼя"
-              />
-              {errors.name && (
-                <span className={styles.error}>
-                  This field is required(2+ characters)
-                </span>
-              )}
-            </div>
-
-            <div className={styles.label}>
-              <input
-                type="text"
-                {...register('email', { required: true })}
-                className={styles.input}
-                placeholder="Електронна пошта або телефон"
-              />
-              {errors.email && (
-                <span className={styles.error}>This field is required</span>
-              )}
-            </div>
-
-            <div className={styles.label}>
-              <textarea
-                {...register('msg', {
-                  required: true,
-                  minLength: 2,
-                  maxLength: 1000,
-                })}
-                className={styles.textarea}
-                placeholder="Повідомлення"
-              />
-              {errors.msg && (
-                <span className={styles.error}>
-                  This field is required(2...1000 characters)
-                </span>
-              )}
-            </div>
-
-            <button className={styles.button} type="submit">
-              Відправити
-            </button>
-            {load && (
-              <div className={styles.loader_wrap}>
-                <Hourglass
-                  visible={true}
-                  height="100"
-                  width="100"
-                  ariaLabel="hourglass-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                  colors={['#0AD87A', '#72ed72']}
-                />
-              </div>
-            )}
-          </form>
-        </>
-      ) : (
-        <div className={styles.notify_wrap}>
-          <p
-            className={styles.notify_msg}
-            style={{
-              backgroundColor: visibleMsg === 'success' ? 'green' : 'red',
-            }}
-          >
-            {visibleMsg === 'success'
-              ? 'Message sent successfully!'
-              : `Message not sent! Please try again later.`}
-          </p>
+      <form onSubmit={handleSubmit(onSubmit)} className="xl:w-full">
+        <div className="">
+          {inputs.map((inputConfig, idx) => (
+            <FormField
+              key={idx}
+              register={register}
+              errors={errors}
+              trigger={trigger}
+              config={inputConfig}
+            />
+          ))}
         </div>
-      )}
+
+        <FormTextField
+          config={textArea}
+          register={register}
+          errors={errors}
+          trigger={trigger}
+        />
+
+        <button
+          type="submit"
+          disabled={Object.keys(errors).length > 0 || pending}
+          className={cn(
+            'flex w-full items-center justify-center rounded-[16px] bg-accentBg p-3.5 transition-colors',
+            '2xl:py-5 2xl:leading-[1.5]',
+            'text-center text-base/normal font-semibold text-strongDarkText',
+            'hover:bg-accentBgEffect',
+          )}
+        >
+          {submitBtnLabel}
+
+          <Loader size={20} visible={pending} strokeWidth={1.5} color="#000" />
+        </button>
+      </form>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </>
   );
 };

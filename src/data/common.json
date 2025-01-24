@@ -1,3 +1,18 @@
 {
-  "testField": "WDS_template"
+  "langCode": {
+    "ua": "UA",
+    "en": "EN"
+  },
+  "logo": {
+    "path": "/images/logo/logo.png",
+    "pathWithTextColumn": "/images/logo/logo-with-text-column.png",
+    "pathWithTextRow": "/images/logo/logo-with-text-row.png"
+  },
+  "companyName": "WebDevSynergy",
+  "emailData": {
+    "recipient": "wds.webdevsynergy@gmail.com",
+    "subjectPlaceholder": "Email from the site",
+    "subjectMailUser": "Підтвердження отримання запиту від ЛАООІ",
+    "subjectMailWDS": "Нова заявка на сайті WebDevSynergy.com.ua від "
+  }
 }
