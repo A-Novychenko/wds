@@ -46,7 +46,11 @@ export const FormField: React.FC<FormFieldProps> = ({
         className={cn(
           'rounded-[16px] border border-solid border-transparent px-4 py-[14px] font-light text-secondaryText',
           '2xl:p-4',
-          { 'border-error outline-error': isError },
+          'focus:outline-none focus:-outline-offset-2',
+          {
+            'border-error outline-error focus:shadow-error focus:outline-error':
+              isError,
+          },
         )}
         {...register(name as keyof IContactsFormFields, {
           required: validationOptions.required.value
