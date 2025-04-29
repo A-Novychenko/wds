@@ -44,7 +44,11 @@ export const FormTextField: React.FC<FormTextFieldProps> = ({
         className={cn(
           'mb-1 h-[180px] resize-none rounded-[16px] border border-solid border-transparent px-4 py-[14px] font-light text-secondaryText',
           '2xl:h-[208px] 2xl:p-4',
-          { 'border-error outline-error': isError },
+          'focus:outline-none focus:-outline-offset-2',
+          {
+            'border-error outline-error focus:shadow-error focus:outline-error':
+              isError,
+          },
         )}
         {...register(name as 'message', {
           required: required
