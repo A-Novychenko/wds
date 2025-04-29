@@ -13,7 +13,6 @@ export default async function Home({ params }: { params: Promise<ILang> }) {
       <ServicesSection dict={dict} lang={lang} />
 
       <ContactSection dict={dict} lang={lang} />
-      {/* <ContactSection /> */}
     </>
   );
 }
