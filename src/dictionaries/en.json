@@ -33,11 +33,11 @@
       },
       {
         "name": "Services",
-        "href": "/services"
+        "href": "#services"
       },
       {
         "name": "Contact",
-        "href": "/contact"
+        "href": "#contacts"
       }
     ]
   },
@@ -83,7 +83,7 @@
     "contactSection": {
       "title": "Get in Touch",
       "img": "/images/contact-section.png",
-      "alt": "Company logo",
+      "alt": "A computer with the headline: 'Your site could be here on its screen'",
       "form": {
         "submitBtnLabel": "Send message",
         "successSubmit": "Request sent successfully!",

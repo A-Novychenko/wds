@@ -13,7 +13,7 @@ export const Contacts: React.FC<ContactsProps> = ({
         <Link
           href={email.href}
           className={cn(
-            'rounded-[12px] px-2 py-2.5 text-base/normal font-semibold transition-colors xl:px-0',
+            'rounded-[12px] px-2 py-2.5 text-base/normal font-semibold transition-colors',
             'hover:bg-lightBg/20 focus:bg-lightBg/20',
           )}
         >
@@ -25,7 +25,7 @@ export const Contacts: React.FC<ContactsProps> = ({
         <Link
           href={phone.href}
           className={cn(
-            'rounded-[12px] px-2 py-2.5 text-base/normal font-semibold transition-colors xl:px-0',
+            'rounded-[12px] px-2 py-2.5 text-base/normal font-semibold transition-colors',
             'hover:bg-lightBg/20 focus:bg-lightBg/20',
           )}
         >

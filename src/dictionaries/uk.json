@@ -33,11 +33,11 @@
       },
       {
         "name": "Послуги",
-        "href": "/services"
+        "href": "#services"
       },
       {
         "name": "Контакти",
-        "href": "/contact"
+        "href": "#contacts"
       }
     ]
   },
@@ -82,8 +82,8 @@
     },
     "contactSection": {
       "title": "Зв'яжіться з нами",
-      "img": "/images/contact-section.png",
-      "alt": "Логотип компанії",
+      "img": "/images/contact-section-ua.png",
+      "alt": "Компютер на екрані якого зображений заголовок: 'Тут може бути Ваш сайт'",
       "form": {
         "submitBtnLabel": "Надіслати повідомлення",
         "successSubmit": "Повідомлення відправлено!",

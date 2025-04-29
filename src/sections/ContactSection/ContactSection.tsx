@@ -5,12 +5,12 @@ import { Title } from '@/components/ui';
 
 import { cn } from '@/utils';
 
-export const ContactSection: React.FC<ISectionProps> = ({ dict }) => {
+export const ContactSection: React.FC<ISectionProps> = ({ dict, lang }) => {
   const { title, img, alt } = dict.mainPage.contactSection;
   const data = dict.mainPage.contactSection.form;
 
   return (
-    <section className="section">
+    <section className="section" id="contacts">
       <div className="container">
         <Title tag="h2" style="second" className="mb-4">
           {title}
@@ -25,13 +25,15 @@ export const ContactSection: React.FC<ISectionProps> = ({ dict }) => {
               '2xl:h-[522px] 2xl:w-[828px] 2xl:rounded-[24px]',
             )}
           >
-            <Image
-              src={img}
-              alt={alt}
-              width={828}
-              height={522}
-              className="size-full object-cover"
-            />
+            {lang && (
+              <Image
+                src={img}
+                alt={alt}
+                width={828}
+                height={522}
+                className="size-full object-cover"
+              />
+            )}
           </div>
 
           <ContactForm data={data} />
