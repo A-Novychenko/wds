@@ -1,4 +1,13 @@
-import { ContactSection, HeroSection, ServicesSection } from '@/sections';
+import {
+  AboutSection,
+  BenefitsSection,
+  ContactSection,
+  DevelopmentStagesSection,
+  FaqSection,
+  HeroSection,
+  LatestProjectsSection,
+  ServicesSection,
+} from '@/sections';
 
 import { getDictionary } from '@/utils/dictionaries';
 
@@ -11,6 +20,16 @@ export default async function Home({ params }: { params: Promise<ILang> }) {
       <HeroSection dict={dict} lang={lang} />
 
       <ServicesSection dict={dict} lang={lang} />
+
+      <AboutSection dict={dict} lang={lang} />
+
+      <DevelopmentStagesSection dict={dict} lang={lang} />
+
+      <LatestProjectsSection dict={dict} lang={lang} />
+
+      <BenefitsSection dict={dict} lang={lang} />
+
+      <FaqSection dict={dict} lang={lang} />
 
       <ContactSection dict={dict} lang={lang} />
     </>

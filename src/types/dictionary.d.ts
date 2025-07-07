@@ -8,6 +8,11 @@ interface IDictionary {
   mainPage: {
     heroSection: IHeroSection;
     servicesSection: IServicesSection;
+    aboutSection: IAboutSection;
+    developmentStagesSection: IDevelopmentStagesSection;
+    latestProjectsSection: ILatestProjectsSection;
+    benefitsSection: IBenefitsSection;
+    faqSection: IFaqSection;
     contactSection: IContactSection;
   };
   technicalPages: ITechnicalPages;
@@ -59,12 +64,76 @@ interface IHeroSection {
   description: string;
   img: string;
   alt: string;
+  btnLabel: string;
 }
 
 interface IServicesSection {
   title: string;
-  services: {
+  services: IServiceItem[];
+}
+
+interface IServiceItem {
+  label: string;
+  description: string;
+  price: string;
+}
+
+interface IAboutSection {
+  title: string;
+  paragraphs: string[];
+  cta: {
     label: string;
+    link: string;
+  };
+  image: {
+    alt: string;
+    src: string;
+  };
+}
+
+interface Stage {
+  number: number;
+  title: string;
+  description: string;
+}
+
+interface IDevelopmentStagesSection {
+  title: string;
+  subtitle?: string;
+  stages: Stage[];
+}
+
+interface ILatestProject {
+  title: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  link?: string;
+}
+
+interface ILatestProjectsSection {
+  title: string;
+  subtitle: string;
+  linkLabel: string;
+  projects: ILatestProject[];
+}
+
+interface IBenefit {
+  text: string;
+  title: string;
+}
+interface IBenefitsSection {
+  title: string;
+  benefits: IBenefit[];
+}
+
+interface IFaqSection {
+  title: string;
+  faq: {
+    question: string;
+    answer: string;
   }[];
 }
 

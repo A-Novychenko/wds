@@ -20,8 +20,8 @@ export const ServicesSection: React.FC<ISectionProps> = ({ dict }) => {
           )}
         >
           {services &&
-            services.map(({ label }, idx) => (
-              <ServicesCard key={idx} label={label} />
+            services.map((serviceItem, idx) => (
+              <ServicesCard key={idx} serviceItem={serviceItem} />
             ))}
         </ul>
       </div>

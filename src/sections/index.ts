@@ -2,3 +2,8 @@ export * from './PlaceholderSection';
 export * from './HeroSection';
 export * from './ServicesSection';
 export * from './ContactSection';
+export * from './AboutSection';
+export * from './DevelopmentStagesSection';
+export * from './LatestProjectsSection';
+export * from './BenefitsSection';
+export * from './FaqSection';
