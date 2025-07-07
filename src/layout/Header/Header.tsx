@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = async ({ lang }) => {
           </div>
 
           <div className="smOnly:hidden">
-            <NavLinks mainNav={mainNav} />
+            <NavLinks mainNav={mainNav} lang={lang} />
           </div>
 
           <div className="xl:ml-[80px] 2xl:ml-[92px]">
@@ -42,7 +42,7 @@ export const Header: React.FC<HeaderProps> = async ({ lang }) => {
           <MobileMenu>
             <Logo lang={lang} alt={logoAlt} withText="column" />
 
-            <NavLinks mainNav={mainNav} />
+            <NavLinks mainNav={mainNav} lang={lang} />
 
             <Contacts contacts={contacts} />
           </MobileMenu>

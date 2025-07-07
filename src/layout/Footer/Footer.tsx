@@ -22,7 +22,11 @@ export const Footer: React.FC<FooterProps> = async ({ lang }) => {
             <Logo lang={lang} alt={logoAlt} withText="row" />
           </div>
 
-          <NavLinks mainNav={mainNav} className="flex-col xl:flex-row" />
+          <NavLinks
+            mainNav={mainNav}
+            lang={lang}
+            className="flex-col xl:flex-row"
+          />
 
           <Contacts contacts={contacts} />
         </div>

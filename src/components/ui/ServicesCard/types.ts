@@ -1,3 +1,3 @@
 export type ServicesCardProps = {
-  label: string;
+  serviceItem: IServiceItem;
 };

@@ -47,36 +47,259 @@
         "accentText": "Web Dev Synergy",
         "text": "The best technical specialists"
       },
-      "description": "We create modern websites and mobile apps that help grow your business. Check out our services and contact us — together, we’ll bring your ideas to life!",
+      "description": "We develop modern websites and apps that help grow your mission. Explore our services and get in touch — together, we’ll bring your ideas to life!",
       "img": "/images/hero.jpg",
-      "alt": "Company logo"
+      "alt": "Company logo",
+      "btnLabel": "Request a Consultation"
     },
     "servicesSection": {
       "title": "Services",
       "services": [
         {
-          "label": "LAnding page Development"
+          "label": "Landing Page",
+          "description": "A one-page website that sells your product or service, attracts the client, and motivates them to take action.",
+          "price": "from $300"
         },
         {
-          "label": "Corporate Website Development"
+          "label": "Corporate Website",
+          "description": "A multi-page website that represents your company online, builds client trust, and helps attract new customers.",
+          "price": "from $600"
         },
         {
-          "label": "Web Application Development"
+          "label": "E-commerce Website",
+          "description": "A fully functional website for selling products online, allowing you to accept orders, manage your assortment, and grow your business on the web.",
+          "price": "from $800"
         },
         {
-          "label": "Modernization of existing projects"
+          "label": "Informational Website",
+          "description": "A website for publishing news, articles, or useful content to share information with your audience and increase brand awareness.",
+          "price": "from $500"
         },
         {
-          "label": "LAnding page design"
+          "label": "Web Applications",
+          "description": "Complex online systems or services that run in the browser and automate processes, convenient for your clients and team.",
+          "price": "from $1000"
         },
         {
-          "label": "Website design"
+          "label": "Mobile Applications",
+          "description": "Custom apps for iOS and Android that bring you closer to your clients and provide easy access to your services via mobile devices.",
+          "price": "from $1500"
         },
         {
-          "label": "Mobile app design"
+          "label": "Website Design",
+          "description": "A custom visual design for your website that combines aesthetics, usability, and effective content presentation.",
+          "price": "from $300"
         },
         {
-          "label": "Other services"
+          "label": "Web Application Design",
+          "description": "A modern, user-friendly, and intuitive interface for web and mobile platforms, tailored to real user needs and ensuring comfortable interaction with your service.",
+          "price": "from $500"
+        },
+        {
+          "label": "Redesign",
+          "description": "Updating the look or structure of your website or app to improve perception, usability, and meet current standards.",
+          "price": "from $400"
+        },
+        {
+          "label": "Technical Support",
+          "description": "Regular updates, bug fixes, and monitoring to ensure stable operation of your website or app without interruptions.",
+          "price": "from $10"
+        },
+        {
+          "label": "Website or App Improvements",
+          "description": "Making changes, updates, or adding new features to an existing website or app — even if it wasn’t built by us.",
+          "price": "from $150"
+        },
+        {
+          "label": "Other Services",
+          "description": "We can also assist with domain and hosting setup, third-party service integration, site migration, or other technical tasks.",
+          "price": "from $25"
+        }
+      ]
+    },
+    "aboutSection": {
+      "title": "About Web Dev Synergy",
+      "paragraphs": [
+        "Web Dev Synergy is a team of experienced professionals who create modern websites and web applications with a personalized approach. We combine deep understanding of business processes, design vision, and technological expertise.",
+        "Our work is transparent, we meet deadlines, and we always strive to find the best solutions for each client. Our tech stack includes React, Next.js, React Native, Node.js, MongoDB, modern CMS platforms, and analytics services.",
+        "We take into account SEO, accessibility, responsiveness, and provide post-launch support. Our goal is to build user-friendly, reliable, and effective digital products that deliver real results."
+      ],
+      "cta": {
+        "label": "Learn more",
+        "link": "/"
+      },
+      "image": {
+        "alt": "Team working together",
+        "src": "/images/about.png"
+      }
+    },
+    "developmentStagesSection": {
+      "title": "Project Development Stages",
+      "subtitle": "7 steps to success",
+      "stages": [
+        {
+          "number": 1,
+          "title": "Analysis",
+          "description": "We start with analyzing the client's needs: defining goals, target audience, and the desired functionality of the future product. We clarify features, research competitors, and collect all preferences. Based on this, we determine the optimal technologies, services, and implementation approach to lay a solid foundation for the next stages."
+        },
+        {
+          "number": 2,
+          "title": "Technical Specification",
+          "description": "We create a clear technical specification: describing core features, design requirements, structure, integrations, and other key parameters. We agree on the timeline, development phases, and expected outcomes to ensure full alignment before starting the project."
+        },
+        {
+          "number": 3,
+          "title": "Design",
+          "description": "We craft a unique, user-friendly, and modern design that reflects your brand’s character and meets the project’s goals. We develop key page layouts with attention to UX/UI, mobile responsiveness, and visual appeal. The final design is approved by you before moving on to development."
+        },
+        {
+          "number": 4,
+          "title": "Technical Implementation",
+          "description": "We bring the design and functionality to life. At this stage, developers build the page structure, apply visual styles, and implement all interactive features according to the technical specification. The site's logic is developed, necessary services are integrated, and content is added."
+        },
+        {
+          "number": 5,
+          "title": "Testing",
+          "description": "We test the website on various devices and browsers to ensure everything works smoothly and without errors. We verify functionality, loading speed, responsiveness, and overall user experience. Any issues found are fixed before the launch."
+        },
+        {
+          "number": 6,
+          "title": "Launch",
+          "description": "We deploy the finished website to the main domain and open it to visitors. We perform final checks under real conditions to ensure flawless operation. The site becomes fully accessible to your customers."
+        },
+        {
+          "number": 7,
+          "title": "Support & Growth",
+          "description": "After launch, we stay with you: providing warranty support, fixing any technical issues, and advising on website usage. If needed, we help expand the site's functionality, add new features, and adapt it to changes in your business."
+        }
+      ]
+    },
+    "latestProjectsSection": {
+      "title": "Latest Projects",
+      "subtitle": "We implement projects that deliver results. Take a look at our recent work.",
+      "linkLabel": "View project",
+      "projects": [
+        {
+          "title": "TAOBAO",
+          "description": "An informational website designed to attract clients and teach them how to purchase products from Chinese marketplaces like Taobao and Pinduoduo. Includes step-by-step guides, practical tips, and useful app links.",
+          "image": {
+            "src": "/images/last-projects/tao.png",
+            "alt": "TAOBAO-site"
+          },
+          "link": "https://main--taobao-pinduoduo-yatsenko.netlify.app"
+        },
+        {
+          "title": "nm-massagekiev",
+          "description": "A website for a massage studio in Kyiv offering a wide range of massage services with a focus on quality, professionalism, and comfort. Features easy navigation, online booking, and detailed descriptions of treatments.",
+          "image": {
+            "src": "/images/last-projects/nm.png",
+            "alt": "nm-massagekiev-site"
+          },
+          "link": "https://nm-massagekiev.com.ua"
+        },
+        {
+          "title": "LAOOI",
+          "description": "The Laooi Association website is an informational platform supporting Ukrainians in Laos. It provides up-to-date news, guidance on adaptation, events, legal matters, and includes a help request form.",
+          "image": {
+            "src": "/images/last-projects/laooi.png",
+            "alt": "laooi-site"
+          },
+          "link": "https://laooi.org/uk"
+        },
+        {
+          "title": "AVTO-MAGAZ",
+          "description": "An online auto parts store specializing in high-quality components for popular car brands. Features VIN-code search, up-to-date pricing, and fast delivery across Ukraine.",
+          "image": {
+            "src": "/images/last-projects/am.png",
+            "alt": "avto-magaz-site"
+          },
+          "link": "https://avto-magaz.com.ua"
+        }
+      ]
+    },
+    "benefitsSection": {
+      "title": "Why Choose Us",
+      "benefits": [
+        {
+          "title": "Individual Approach",
+          "text": "We don’t work with templates — we study Your business and offer solutions tailored to Your specific needs."
+        },
+        {
+          "title": "Experienced Team",
+          "text": "Our team brings together professionals with years of experience in web development and deep expertise in related fields — business, network technologies, infrastructure, server solutions, and IT systems."
+        },
+        {
+          "title": "Transparency in Work",
+          "text": "Every stage of the project is discussed with You. You always know what we’re doing, how much it costs, and when it will be ready."
+        },
+        {
+          "title": "Technical Expertise",
+          "text": "We use modern technologies and proven tools to create reliable and scalable products."
+        },
+        {
+          "title": "Deadline Commitment",
+          "text": "We value Your time — we plan realistic timelines and stick to them."
+        },
+        {
+          "title": "High-Quality Design",
+          "text": "We create not only beautiful but also user-friendly and effective interfaces that increase user engagement."
+        },
+        {
+          "title": "Warranty Support",
+          "text": "After launch, we stay with You — providing technical support and warranty service."
+        },
+        {
+          "title": "Scalable Solutions",
+          "text": "We build projects with future growth in mind — adding new features and integrating third-party services will be simple."
+        },
+        {
+          "title": "SEO-Friendly Development",
+          "text": "We consider search engine requirements in advance to ensure Your website is visible to the target audience."
+        },
+        {
+          "title": "Speed Optimization",
+          "text": "Our websites load quickly and run smoothly — both on desktop and mobile devices."
+        },
+        {
+          "title": "Responsive Design",
+          "text": "Our interfaces look great on mobile phones, tablets, and desktops alike."
+        },
+        {
+          "title": "Comprehensive Approach",
+          "text": "We handle the entire cycle: from analysis and design to launch, support, and future development."
+        }
+      ]
+    },
+    "faqSection": {
+      "title": "Frequently Asked Questions",
+      "faq": [
+        {
+          "question": "What do I need to get started with website development?",
+          "answer": "You contact us and briefly describe the type of website You need: its purpose, design preferences, and desired functionality. Based on this information, we conduct a preliminary analysis and within 1–5 business days provide You with an estimate: implementation options, approximate cost, and timelines. Once the main conditions are agreed upon, we move to the next stage — a detailed analysis, clarifying Your needs, and preparing the technical specifications. We handle all technical planning and technology selection. All we need from You is the desire to bring Your idea to life and a bit of time for an initial discussion."
+        },
+        {
+          "question": "Do you use templates or website builders, or do you develop websites from scratch?",
+          "answer": "Every website we create is built from scratch — tailored specifically to Your needs. This gives full freedom in implementation: we can bring any ideas You have to life, without the limitations of templates or builders. We use modern technologies that allow us to build fast, secure, and flexible websites. This approach makes it easy to expand the project in the future — adding new pages, features, or integrating third-party services. We follow proven development practices to ensure that Your site runs smoothly, looks great, and stays user-friendly for all visitors."
+        },
+        {
+          "question": "Will I be able to edit text and other content on the site myself?",
+          "answer": "Yes, we build websites that allow You to edit text, images, products, and other content through an easy-to-use admin panel. We predefine which sections will be editable — so managing the site is simple, convenient, and risk-free. After the launch, we provide clear instructions (text or video format), and if needed — a short training session, so You feel confident using all features. In the future, the admin panel’s functionality can be expanded upon request."
+        },
+        {
+          "question": "What technologies do you use and why?",
+          "answer": "We use modern, widely adopted technologies — JavaScript frameworks and tools such as React, Next.js, Node.js, and React Native. These are used by leading companies around the world, which means they are actively developed, well-supported, and will stay relevant for many years. By choosing these technologies, we ensure that Your website or app is not only fast and reliable today but also ready for future growth. New sections, features, or even mobile apps can be added later — without having to rebuild everything from scratch. Another benefit is that if You decide to work with another developer later on, they’ll easily be able to continue working on the project — because these technologies are so common. So You’re not only getting a high-quality result, but peace of mind that Your project will stay up-to-date and won’t become obsolete."
+        },
+        {
+          "question": "Do you help with domain selection, hosting setup, and adding the site to Google?",
+          "answer": "Yes, we handle all of these technical steps for You. We’ll help choose a good domain name, set up hosting, connect email, register the site with Google Search Console, and integrate Google Analytics to track visits. We take care of all service registrations, and once the project is complete, we transfer all access details to You (keys, passwords, logins) and explain how to change them for maximum security. You’ll have full control over Your website and all connected services."
+        },
+        {
+          "question": "How is the price of the website determined, and can I know it in advance?",
+          "answer": "The cost depends on the scope of work — design, number of pages, complexity of the features, and third-party integrations. It also matters whether You already have a design or if it needs to be created from scratch. After a short briefing, we analyze Your requirements and within 1–5 days provide a detailed estimate — including the approximate cost, timeframe, and implementation options. For example: a simple multi-page website without complex features and with an existing design may cost from $100. A full-featured, multi-page site with integrations and a custom backend can start from $1,000. But each project is unique — for instance, You may already have a server and only need the frontend redesigned. That’s why the final price is always determined individually after clarifying all the details."
+        },
+        {
+          "question": "Can I start with a small website now and expand it later?",
+          "answer": "Yes, absolutely. We use modern technologies that allow Your site to grow over time — adding new pages, features, or even connecting mobile or web apps. This makes it easy to evolve the project without needing a complete rebuild. Your website can later become part of a larger ecosystem — for example, a site and app working together as one system."
         }
       ]
     },

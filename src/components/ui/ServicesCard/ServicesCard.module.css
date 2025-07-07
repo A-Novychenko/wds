@@ -6,6 +6,12 @@
 
 @media screen and (min-width: 1280px) {
   .card {
+    flex-basis: calc((100% - 24px * 2) / 3);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .card {
     flex-basis: calc((100% - 24px * 3) / 4);
   }
 }
