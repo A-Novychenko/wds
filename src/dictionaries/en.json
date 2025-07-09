@@ -1,15 +1,17 @@
 {
   "meta": {
     "main": {
-      "title": "WDS",
-      "description": "WDS",
-      "keywords": "",
+      "namePage": "Home",
+      "title": "WebDevSynergy – website and application development | WDS",
+      "description": "WebDevSynergy creates high-performance websites, online stores, mobile applications and web services. Professional UI/UX design, SEO optimization, responsive layout, and technical support. Order development for your business in Ukraine and worldwide.",
+      "keywords": "website creation, website development, e-commerce website, order a website, landing page development, business card website, online store, multipage website, site development, web apps, mobile apps, website design, UI UX design, website SEO, web service development, responsive website, order development, turnkey website, web studio, WDS, WebDevSynergy",
       "images": [
         {
           "url": "/meta/og-image.jpg",
           "width": 1200,
           "height": 630,
-          "alt": "WDS"
+          "alt": "WebDevSynergy – website, e-commerce, app development and design. WDS",
+          "type": "image/jpeg"
         }
       ]
     }

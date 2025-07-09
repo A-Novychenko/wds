@@ -23,6 +23,7 @@ interface IMeta {
 }
 
 interface IMetaDataPage {
+  namePage: string;
   title: string;
   description: string;
   keywords: string;
