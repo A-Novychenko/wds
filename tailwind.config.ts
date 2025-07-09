@@ -7,6 +7,7 @@ export default {
     './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '480px',
@@ -53,6 +54,22 @@ export default {
 
         error: '#ff0000',
       },
+
+      // colors: {
+      //   mainBg: 'var(--main-bg)',
+      //   lightBg: 'var(--light-bg)',
+      //   whiteBg: 'var(--white-bg)',
+      //   accentBg: 'var(--accent-bg)',
+      //   accentBgEffect: 'var(--accent-bg-effect)',
+
+      //   primaryText: 'var(--primary-text)',
+      //   secondaryText: 'var(--secondary-text)',
+      //   lightText: 'var(--light-text)',
+      //   strongDarkText: 'var(--strong-dark-text)',
+      //   accentText: 'var(--accent-text)',
+
+      //   error: '#ff0000',
+      // },
       boxShadow: {
         mobMenuHeader: '0px 0px 40px 0px rgba(0, 0, 0, 0.10)',
       },

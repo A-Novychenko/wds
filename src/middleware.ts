@@ -25,18 +25,6 @@ function getLocale(request: NextRequest) {
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
-  // Ігнорувати службові маршрути і статичні ресурси
-  if (
-    pathname.startsWith('/_next') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/static') ||
-    pathname.startsWith('/images') ||
-    pathname.startsWith('/studio') ||
-    pathname === '/favicon.ico'
-  ) {
-    return NextResponse.next();
-  }
-
   // Перевірка, чи є локаль у шляху
   const pathnameHasLocale = locales.some(
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
@@ -59,5 +47,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|static|images|favicon.ico).*)'],
+  matcher: [
+    '/((?!_next|api|static|meta|images|favicon.ico|robots.txt|sitemap.xml|manifest.webmanifest).*)',
+  ],
 };

@@ -1,6 +1,7 @@
 import { Nunito_Sans } from 'next/font/google';
 
 import { Footer, Header } from '@/layout';
+
 import { ScrollToTopButton } from '@/components/ui';
 
 import makeMetaData from '@/data/meta';
@@ -14,6 +15,10 @@ const nunitoSans = Nunito_Sans({
   display: 'swap',
   adjustFontFallback: false,
 });
+
+export const viewport = {
+  themeColor: [{ color: '#121212' }],
+};
 
 export async function generateMetadata({ params }: { params: Promise<ILang> }) {
   const lang = (await params).lang || 'uk';

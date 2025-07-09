@@ -73,7 +73,7 @@ export const FormTextField: React.FC<FormTextFieldProps> = ({
         })}
       />
 
-      <div className="flex items-center justify-between text-[10px]">
+      <span className="flex items-center justify-between text-[10px]">
         {isError && (
           <span id={`errorMessage${name}`} className="text-error">
             {errorMessage}
@@ -83,7 +83,7 @@ export const FormTextField: React.FC<FormTextFieldProps> = ({
         <span className="ml-auto">
           {symbolsCount}/{maxLength}
         </span>
-      </div>
+      </span>
     </label>
   );
 };
